@@ -45,9 +45,7 @@ module.exports = {
             const id = request.params.id
             const user = request.body
             const userUpdate = await User.findByIdAndUpdate( id, { new: true } )
-
-            console.log( userUpdate )
-
+            
             response.status( 200 ).json( { message: 'Usuário atualizado com sucesso.' } )
 
         } catch (error) {
