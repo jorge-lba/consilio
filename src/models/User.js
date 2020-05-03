@@ -27,10 +27,10 @@ const UserSchema = new mongoose.Schema( {
             }],
             items:[{
                 name: String,
+                description: String,
                 impactPoints: String
             }],
             running:[{
-                type: String,
                 name: String,
                 impactPoints: String,
                 status: String,
@@ -50,7 +50,6 @@ const UserSchema = new mongoose.Schema( {
                 impactPoints: String
             }],
             running:[{
-                type: String,
                 name: String,
                 impactPoints: String,
                 status: String,
@@ -70,7 +69,6 @@ const UserSchema = new mongoose.Schema( {
                 impactPoints: String
             }],
             running:[{
-                type: String,
                 name: String,
                 impactPoints: String,
                 status: String,
@@ -90,7 +88,6 @@ const UserSchema = new mongoose.Schema( {
                 impactPoints: String
             }],
             running:[{
-                type: String,
                 name: String,
                 impactPoints: String,
                 status: String,
@@ -110,7 +107,6 @@ const UserSchema = new mongoose.Schema( {
                 impactPoints: String
             }],
             running:[{
-                type: String,
                 name: String,
                 impactPoints: String,
                 status: String,
@@ -130,7 +126,6 @@ const UserSchema = new mongoose.Schema( {
                 impactPoints: String
             }],
             running:[{
-                type: String,
                 name: String,
                 impactPoints: String,
                 status: String,
