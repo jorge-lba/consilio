@@ -22,8 +22,7 @@
          .send( data.user )
 
       expect( response.body ).toHaveProperty( 'message', 'Usuário cadastrado com sucesso.' )
-
-      data.user.id = response.body._id
+      data.user.id = response.body.user._id
 
     } )
 
@@ -39,9 +38,8 @@
     it( 'Deve atualizar o usuário', async () => {
 
       const response = await request( app )
-         .put( '/users' )
+         .put( `/users/${ data.user.id }` )
          .send( {
-            _id: data.user.id,
             name: 'Jorge Luiz'
          } )
 
