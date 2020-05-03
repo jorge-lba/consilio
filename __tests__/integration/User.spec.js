@@ -46,4 +46,13 @@
       expect( response.body ).toHaveProperty( 'message', 'Usuário atualizado com sucesso.' )
     } )
 
+    it( 'Deve deletar o usuário', async () => {
+
+      const response = await request( app )
+         .delete( `/users/${ data.user.id }` )
+
+      expect( response.body ).toHaveProperty( 'message', 'Usuário deletado com sucesso.' )
+
+    } )
+
  } )
