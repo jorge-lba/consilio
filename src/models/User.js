@@ -28,11 +28,13 @@ const UserSchema = new mongoose.Schema( {
             items:[{
                 name: String,
                 description: String,
-                impactPoints: String
+                gravity: Number,
+                urgency: Number,
+                trend: Number,
+                impactPoints: Number,
             }],
             running:[{
-                name: String,
-                impactPoints: String,
+                itemId: String,
                 status: String,
                 responsible: String,
                 initDate: Date,
@@ -47,15 +49,18 @@ const UserSchema = new mongoose.Schema( {
             }],
             items:[{
                 name: String,
-                impactPoints: String
+                description: String,
+                gravity: Number,
+                urgency: Number,
+                trend: Number,
+                impactPoints: Number,
             }],
             running:[{
-                name: String,
-                impactPoints: String,
+                itemId: String,
                 status: String,
                 responsible: String,
                 initDate: Date,
-                endDate: Date, 
+                endDate: Date,
             }]
         },
          
@@ -66,15 +71,18 @@ const UserSchema = new mongoose.Schema( {
             }],
             items:[{
                 name: String,
-                impactPoints: String
+                description: String,
+                gravity: Number,
+                urgency: Number,
+                trend: Number,
+                impactPoints: Number,
             }],
             running:[{
-                name: String,
-                impactPoints: String,
+                itemId: String,
                 status: String,
-                responsible: String, 
+                responsible: String,
                 initDate: Date,
-                endDate: Date, 
+                endDate: Date,
             }]
         },
          
@@ -85,15 +93,18 @@ const UserSchema = new mongoose.Schema( {
             }],
             items:[{
                 name: String,
-                impactPoints: String
+                description: String,
+                gravity: Number,
+                urgency: Number,
+                trend: Number,
+                impactPoints: Number,
             }],
             running:[{
-                name: String,
-                impactPoints: String,
+                itemId: String,
                 status: String,
-                responsible: String, 
+                responsible: String,
                 initDate: Date,
-                endDate: Date, 
+                endDate: Date,
             }]
         },
          
@@ -104,15 +115,18 @@ const UserSchema = new mongoose.Schema( {
             }],
             items:[{
                 name: String,
-                impactPoints: String
+                description: String,
+                gravity: Number,
+                urgency: Number,
+                trend: Number,
+                impactPoints: Number,
             }],
             running:[{
-                name: String,
-                impactPoints: String,
+                itemId: String,
                 status: String,
                 responsible: String,
                 initDate: Date,
-                endDate: Date,  
+                endDate: Date,
             }]
         },
          
@@ -123,15 +137,15 @@ const UserSchema = new mongoose.Schema( {
             }],
             items:[{
                 name: String,
+                description: String,
                 impactPoints: String
             }],
             running:[{
-                name: String,
-                impactPoints: String,
+                itemId: String,
                 status: String,
-                responsible: String, 
+                responsible: String,
                 initDate: Date,
-                endDate: Date, 
+                endDate: Date,
             }]
 
         },
