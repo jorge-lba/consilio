@@ -49,7 +49,7 @@ const UserSchema = new mongoose.Schema( {
         responsible: String,
         initDate: Date,
         forecastDateToFinish: Date,
-        endDate: Date,
+        finishedDate: Date,
     }],
     
     // commercial: {

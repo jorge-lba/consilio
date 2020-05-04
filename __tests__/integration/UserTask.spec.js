@@ -16,7 +16,8 @@ const data = {
         gravity: 3,
         urgency: 5,
         trend: 5,
-    }   
+    },
+    running: {}
 }
 
 describe( "TASK_CREATE", () => {
@@ -65,6 +66,18 @@ describe( "TASK_CREATE", () => {
             } )
 
         expect( response.body ).toHaveProperty( 'message', 'Tarefa em progresso' )
+        data.running.id = response.body.task._id
+
+    } )
+
+    it( 'Deve finalizar a execução de uma tarefa', async () => {
+        const response = await request( app )
+            .put( `/users/${ data.user.id }/tasks/finished` )
+            .send( {
+                taskId: data.running.id 
+            } )
+        
+        expect( response.body ).toHaveProperty( 'message', 'Tarefa concluida' )
 
     } )
 

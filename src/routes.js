@@ -14,6 +14,8 @@ routes.delete( '/users/:id', UserController.delete )
 
 routes.put( '/users/:id/tasks', TaskController.add )
 routes.put( '/users/:id/tasks/init', TaskController.init )
+routes.put( '/users/:id/tasks/finished', TaskController.finished )
+
 
 
 routes.get( '/questions', QuestionController.index )
