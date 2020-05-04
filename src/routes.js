@@ -3,7 +3,7 @@ const UserController = require( '../src/controllers/UserController' )
 const QuestionController = require( '../src/controllers/QuestionController' )
 const TwilioController = require( '../src/controllers/TwilioController' )
 const TaskController = require( '../src/controllers/TaskController' )
-
+const UserQuestionController = require( '../src/controllers/UserQuestionController' )
 
 const routes = express.Router()
 
@@ -16,6 +16,7 @@ routes.put( '/users/:id/tasks', TaskController.add )
 routes.put( '/users/:id/tasks/init', TaskController.init )
 routes.put( '/users/:id/tasks/finished', TaskController.finished )
 
+routes.put( '/users/:id/questions/add', UserQuestionController.add )
 
 
 routes.get( '/questions', QuestionController.index )

@@ -19,11 +19,7 @@ const UserSchema = new mongoose.Schema( {
 
     },
 
-    questions: [{
-        question: String,
-        answer: String,
-        category: String,
-    }],
+    questions: [Object],
 
     tasks:[{
         name: String,
