@@ -18,141 +18,54 @@ const UserSchema = new mongoose.Schema( {
         }]
 
     },
-    planning: {
+
+    questions: [{
+        question: String,
+        answer: String,
+        category: String,
+    }],
+
+    tasks:[{
+        name: String,
+        description: String,
+        category: String,
+        gravity: Number,
+        urgency: Number,
+        trend: Number,
+        impactPoints: Number,
+    }],
+
+    running:[{
+        tasksId: String,
+        status: String,
+        responsible: String,
+        initDate: Date,
+        endDate: Date,
+    }],
+    
+    // commercial: {
         
-        commercial: {
-            questions: [{
-                question: String,
-                answer: String,
-            }],
-            items:[{
-                name: String,
-                description: String,
-                gravity: Number,
-                urgency: Number,
-                trend: Number,
-                impactPoints: Number,
-            }],
-            running:[{
-                itemId: String,
-                status: String,
-                responsible: String,
-                initDate: Date,
-                endDate: Date,
-            }]
-        },
+    // },
 
-        marketing: {
-            questions: [{
-                question: String,
-                answer: String,
-            }],
-            items:[{
-                name: String,
-                description: String,
-                gravity: Number,
-                urgency: Number,
-                trend: Number,
-                impactPoints: Number,
-            }],
-            running:[{
-                itemId: String,
-                status: String,
-                responsible: String,
-                initDate: Date,
-                endDate: Date,
-            }]
-        },
-         
-        operational: {
-            questions: [{
-                question: String,
-                answer: String,
-            }],
-            items:[{
-                name: String,
-                description: String,
-                gravity: Number,
-                urgency: Number,
-                trend: Number,
-                impactPoints: Number,
-            }],
-            running:[{
-                itemId: String,
-                status: String,
-                responsible: String,
-                initDate: Date,
-                endDate: Date,
-            }]
-        },
-         
-        financial: {
-            questions: [{
-                question: String,
-                answer: String,
-            }],
-            items:[{
-                name: String,
-                description: String,
-                gravity: Number,
-                urgency: Number,
-                trend: Number,
-                impactPoints: Number,
-            }],
-            running:[{
-                itemId: String,
-                status: String,
-                responsible: String,
-                initDate: Date,
-                endDate: Date,
-            }]
-        },
-         
-        legislation: {
-            questions: [{
-                question: String,
-                answer: String,
-            }],
-            items:[{
-                name: String,
-                description: String,
-                gravity: Number,
-                urgency: Number,
-                trend: Number,
-                impactPoints: Number,
-            }],
-            running:[{
-                itemId: String,
-                status: String,
-                responsible: String,
-                initDate: Date,
-                endDate: Date,
-            }]
-        },
-         
-        management: {
-            questions: [{
-                question: String,
-                answer: String,
-            }],
-            items:[{
-                name: String,
-                description: String,
-                impactPoints: String
-            }],
-            running:[{
-                itemId: String,
-                status: String,
-                responsible: String,
-                initDate: Date,
-                endDate: Date,
-            }]
-
-        },
-
-    },
-
-
+    // marketing: {
+        
+    // },
+        
+    // operational: {
+        
+    // },
+        
+    // financial: {
+        
+    // },
+        
+    // legislation: {
+       
+    // },
+        
+    // management: {
+        
+    // },
 
 } )
 

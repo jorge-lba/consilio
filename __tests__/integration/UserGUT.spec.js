@@ -37,12 +37,21 @@ describe( "GUT_CREATE", () => {
     it( 'Deve adcionar uma tarefa no perfil do usuário', async () => {
 
         const response = await request( app )
-            .put( `/users/${ data.user.id }/gut` )
+            .put( `/users/${ data.user.id || '5eafa181cd99631eed7911ef' }/gut` )
             .send( data.tasks )
 
-        expect( response.body ).toHaveProperty( 'message', `A terefa ${ response.body.task.name } tem ${ response.body.task.priority } postos de prioridade.` )
+        expect( response.body ).toHaveProperty( 'message', `A terefa ${ response.body.task.name } tem ${ response.body.task.impactPoints } postos de prioridade.` )
 
     } )
+
+    it( 'Deve deletar o usuário', async () => {
+
+        const response = await request( app )
+           .delete( `/users/${ data.user.id }` )
+  
+        expect( response.body ).toHaveProperty( 'message', 'Usuário deletado com sucesso.' )
+  
+      } )
 
 
 } )
