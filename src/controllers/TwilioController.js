@@ -6,7 +6,7 @@ module.exports = {
 
         try {
             
-            const details = await sms( request.body.number )
+            const details = await sms( request.body.number, request.body.message )
 
             response.status( 200 ).json( { message: 'Enviamos uma mensagem para você', details } )
             

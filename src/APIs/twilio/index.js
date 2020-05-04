@@ -6,7 +6,7 @@ const twilioClient = twilio(
     process.env.TWILIO_AUTH_TOKEN
 )
 
-const sendMessageSMS = async ( sendTo ) => {
+const sendMessageSMS = async ( sendTo, message = 'Consilio - Plataformas de Gestão e Educação' ) => {
 
     try {
 
@@ -14,7 +14,7 @@ const sendMessageSMS = async ( sendTo ) => {
 
             from: process.env.TWILIO_NUMBER,
             to: sendTo || process.env.TWILIO_NUMBER_TEST,
-            body: 'Você pretende dormir essa madrugada? Consilio - Planejamos até seus SONHOS'
+            body: message
 
         })
 
