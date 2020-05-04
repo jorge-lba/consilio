@@ -7,7 +7,7 @@ jest.setTimeout( 4000 )
 const data = {
     user: {
         name: 'Jorge Luiz',
-        email: 'jorge@test.com'
+        email: 'jorgeluiz@test.com'
     },
     tasks:{
         name: 'Funil de Venda',

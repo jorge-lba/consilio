@@ -18,12 +18,11 @@ const sendMessageSMS = async ( sendTo ) => {
 
         })
 
-        console.log( response )
-
     } catch (error) {
         console.log( error )
     }
 
 }
+
 
 module.exports = sendMessageSMS

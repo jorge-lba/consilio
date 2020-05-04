@@ -15,6 +15,6 @@ routes.post( '/questions', QuestionController.create )
 routes.put( '/questions/:id', QuestionController.update )
 routes.delete( '/questions/:id', QuestionController.delete )
 
-routes.get( '/sms/:number', TwilioController.sendSMS )
+routes.post( '/sms', TwilioController.sendSMS )
 
 module.exports = routes

@@ -5,8 +5,8 @@ module.exports = {
     async sendSMS( request, response ){
 
         try {
-            console.log( request.params.number )
-            const details = await sms( request.params.number )
+            
+            const details = await sms( request.body.number )
 
             response.status( 200 ).json( { message: 'Enviamos uma mensagem para você', details } )
             
