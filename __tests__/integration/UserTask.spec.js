@@ -19,7 +19,7 @@ const data = {
     }   
 }
 
-describe( "GUT_CREATE", () => {
+describe( "TASK_CREATE", () => {
 
     afterAll( async ( ) => mongoose.disconnect() )
 

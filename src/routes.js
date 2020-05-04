@@ -2,7 +2,7 @@ const express = require( 'express' )
 const UserController = require( '../src/controllers/UserController' )
 const QuestionController = require( '../src/controllers/QuestionController' )
 const TwilioController = require( '../src/controllers/TwilioController' )
-const GutController = require( '../src/controllers/GutController' )
+const TaskController = require( '../src/controllers/TaskController' )
 
 
 const routes = express.Router()
@@ -12,7 +12,7 @@ routes.post( '/users', UserController.create )
 routes.put( '/users/:id', UserController.update )
 routes.delete( '/users/:id', UserController.delete )
 
-routes.put( '/users/:id/gut', GutController.add )
+routes.put( '/users/:id/gut', TaskController.add )
 
 routes.get( '/questions', QuestionController.index )
 routes.post( '/questions', QuestionController.create )
