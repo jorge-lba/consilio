@@ -33,13 +33,22 @@ const UserSchema = new mongoose.Schema( {
         urgency: Number,
         trend: Number,
         impactPoints: Number,
+        
     }],
 
     running:[{
-        tasksId: String,
+        taskId: String,
+        name: String,
+        description: String,
+        category: String,
+        gravity: Number,
+        urgency: Number,
+        trend: Number,
+        impactPoints: Number,
         status: String,
         responsible: String,
         initDate: Date,
+        forecastDateToFinish: Date,
         endDate: Date,
     }],
     

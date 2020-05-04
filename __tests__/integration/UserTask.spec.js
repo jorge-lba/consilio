@@ -37,10 +37,34 @@ describe( "TASK_CREATE", () => {
     it( 'Deve adcionar uma tarefa no perfil do usuário', async () => {
 
         const response = await request( app )
-            .put( `/users/${ data.user.id || '5eafa181cd99631eed7911ef' }/gut` )
+            .put( `/users/${ data.user.id || '5eafa181cd99631eed7911ef' }/tasks` )
+            .send( data.tasks )
+        
+        await request( app )
+            .put( `/users/${ data.user.id || '5eafa181cd99631eed7911ef' }/tasks` )
+            .send( data.tasks )
+        
+        await request( app )
+            .put( `/users/${ data.user.id || '5eafa181cd99631eed7911ef' }/tasks` )
             .send( data.tasks )
 
         expect( response.body ).toHaveProperty( 'message', `A terefa ${ response.body.task.name } tem ${ response.body.task.impactPoints } postos de prioridade.` )
+
+        data.tasks.id = response.body.task._id
+
+    } )
+
+    it( 'Deve iniciar a execução da tarefa', async () => {
+
+        const response = await request( app )
+            .put( `/users/${ data.user.id }/tasks/init` )
+            .send( {
+                taskId: data.tasks.id,
+                responsible: 'Jorge Alegretti',
+                forecastDateToFinish: 60
+            } )
+
+        expect( response.body ).toHaveProperty( 'message', 'Tarefa em progresso' )
 
     } )
 

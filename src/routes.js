@@ -12,7 +12,9 @@ routes.post( '/users', UserController.create )
 routes.put( '/users/:id', UserController.update )
 routes.delete( '/users/:id', UserController.delete )
 
-routes.put( '/users/:id/gut', TaskController.add )
+routes.put( '/users/:id/tasks', TaskController.add )
+routes.put( '/users/:id/tasks/init', TaskController.init )
+
 
 routes.get( '/questions', QuestionController.index )
 routes.post( '/questions', QuestionController.create )
