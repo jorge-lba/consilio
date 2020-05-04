@@ -31,7 +31,7 @@ module.exports = {
 
             const tasksUser = userUpdate.tasks
 
-            response.status( 200 ).json( { message, task: tasksUser[ tasksUser.length - 1 ], task: tasksUser[ tasksUser.length - 1 ] } )
+            response.status( 200 ).json( { message, task: tasksUser[ tasksUser.length - 1 ] } )
 
         } catch (error) {
             
@@ -68,7 +68,7 @@ module.exports = {
                 }
              }, { new: true } )
 
-             response.status( 200 ).json( { message: 'Tarefa em progresso' } )
+             response.status( 200 ).json( { message: 'Tarefa em progresso' , task: newTask} )
 
         } catch (error) {
             
