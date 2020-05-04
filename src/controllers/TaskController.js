@@ -31,7 +31,7 @@ module.exports = {
 
             const tasksUser = userUpdate.tasks
 
-            response.status( 200 ).json( { message, task: tasksUser[ tasksUser.length - 1 ] } )
+            response.status( 200 ).json( { message, task: tasksUser[ tasksUser.length - 1 ], task: tasksUser[ tasksUser.length - 1 ] } )
 
         } catch (error) {
             
